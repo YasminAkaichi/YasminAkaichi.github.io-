@@ -102,6 +102,10 @@
     .pub-links a { font-size: .85rem; border: 1px solid var(--link); border-radius: 4px; padding: 0 6px; margin-right: 6px; }
     .pub-links a:hover { background: var(--link); color: #fff; text-decoration: none; }
 
+    .figure { margin-top: 16px; }
+    .figure img { width: 100%; height: auto; display: block; border: 1px solid #e3e7ea; border-radius: 6px; }
+    .figure figcaption { font-size: .88rem; color: var(--muted); margin-top: 6px; text-align: center; }
+
     footer {
       max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px;
       border-top: 1px solid #e3e7ea; color: var(--muted);
@@ -215,6 +219,10 @@
       <div class="entry" style="margin-top:24px">
         <strong><a href="https://github.com/YasminAkaichi/FILP-platform" target="_blank" rel="noopener">FILP Platform</a></strong>
         <em>Open-source platform developed as part of my PhD research.</em>
+        <figure class="figure">
+          <a href="filp-pipeline.png" target="_blank" rel="noopener"><img src="filp-pipeline.png" alt="FILP pipeline: end-to-end flow for running federated ILP experiments" loading="lazy"></a>
+          <figcaption>The FILP pipeline, from datasets to interpretable results (click to enlarge).</figcaption>
+        </figure>
       </div>
     </section>
 
