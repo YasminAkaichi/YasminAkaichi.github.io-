@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasmine Akaichi</title>
+  <meta name="description" content="Yasmine Akaichi – PhD Candidate in Artificial Intelligence, Federated & Interpretable Machine Learning, Trustworthy AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1d3549;
+      --accent: #9b1016;
+      --link: #0a72b8;
+      --text: #3a4a58;
+      --muted: #6b7680;
+      --line: #c9d1d8;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Open Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---------- Header ---------- */
+    header {
+      background: var(--navy);
+      position: sticky; top: 0; z-index: 10;
+    }
+    .nav {
+      max-width: 1000px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px; min-height: 76px; flex-wrap: wrap;
+    }
+    .brand { color: #fff; font-size: 1.25rem; font-weight: 600; }
+    .brand:hover { text-decoration: none; }
+    .nav ul { list-style: none; display: flex; gap: 6px; flex-wrap: wrap; }
+    .nav ul a {
+      color: #fff; display: block; padding: 24px 14px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav ul a:hover, .nav ul a.active {
+      text-decoration: none; border-bottom-color: #fff;
+    }
+
+    /* ---------- Layout ---------- */
+    main {
+      max-width: 1000px; margin: 0 auto; padding: 60px 20px;
+      display: grid; grid-template-columns: 280px 1fr; gap: 40px;
+    }
+    aside { text-align: center; }
+    .photo {
+      width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;
+      background: #e6ebef;
+    }
+    .photo-fallback {
+      width: 100%; aspect-ratio: 1 / 1; display: none;
+      align-items: center; justify-content: center;
+      background: var(--navy); color: #fff; font-size: 4rem; font-weight: 600;
+    }
+    aside h1 { font-size: 1.5rem; color: var(--navy); margin-top: 28px; font-weight: 600; }
+    aside .role { font-size: 1.2rem; color: var(--muted); font-weight: 600; }
+    aside .place { font-size: .95rem; color: var(--muted); margin-top: 6px; }
+    .icons { display: flex; justify-content: center; gap: 14px; margin-top: 18px; }
+    .icons a { color: var(--link); display: inline-flex; }
+    .icons svg { width: 30px; height: 30px; fill: currentColor; }
+    .icons a:hover { color: var(--navy); }
+
+    section { margin-bottom: 50px; scroll-margin-top: 100px; }
+    section p + p { margin-top: 14px; }
+    h2 {
+      color: var(--accent); font-size: 1.6rem; font-weight: 600;
+      display: flex; align-items: center; gap: 14px; margin-bottom: 22px;
+    }
+    h2::after { content: ""; flex: 1; height: 2px; background: #5d6b78; }
+
+    .entry { margin-bottom: 20px; }
+    .entry strong { color: var(--navy); display: block; }
+    .entry em { color: var(--muted); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .tags span {
+      background: #eef2f5; color: var(--navy); font-size: .88rem;
+      padding: 4px 12px; border-radius: 20px;
+    }
+
+    ul.news { padding-left: 22px; list-style: circle; }
+    ul.news li { margin-bottom: 14px; padding-left: 4px; }
+
+    footer {
+      max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px;
+      border-top: 1px solid #e3e7ea; color: var(--muted);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    }
+
+    @media (max-width: 760px) {
+      main { grid-template-columns: 1fr; padding-top: 36px; }
+      aside { max-width: 280px; margin: 0 auto; }
+      .nav { justify-content: center; padding-top: 12px; }
+      .nav ul a { padding: 12px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home">Yasmine Akaichi</a>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- ========== Sidebar ========== -->
+  <aside>
+    <!-- Put your photo in the same folder, named photo.jpg -->
+    <img class="photo" src="photo.jpg" alt="Yasmine Akaichi"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="photo-fallback">YA</div>
+
+    <h1>Yasmine Akaichi</h1>
+    <div class="role">PhD Candidate in AI</div>
+    <div class="place">Université de Namur &amp; Université Clermont Auvergne</div>
+
+    <div class="icons">
+      <a href="mailto:ya.akaichi@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.3l-10 6.3L2 5.8v-.3Zm0 2.7V18.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V8.2l-9.5 6a1 1 0 0 1-1 0L2 8.2Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yasmine-akaichi-761975197/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9A1.55 1.55 0 0 0 3.55 22h16.9A1.55 1.55 0 0 0 22 20.45V3.55A1.55 1.55 0 0 0 20.45 2ZM8 19H5V9.5h3V19ZM6.5 8.2a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3V9.5h2.9v1.3h.04a3.2 3.2 0 0 1 2.86-1.57c3.06 0 3.6 2 3.6 4.63V19Z"/></svg>
+      </a>
+      <a href="https://github.com/YasminAkaichi" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========== Content ========== -->
+  <div>
+    <section id="home">
+      <p>I am an AI researcher with a strong interest in building <strong>trustworthy, interpretable and privacy-aware learning systems</strong>. My PhD research focuses on <strong>Federated Learning and symbolic AI</strong>, at the intersection of machine learning, explainability, data privacy and responsible AI.</p>
+      <p>Alongside research, I enjoy working across the data lifecycle, from data processing and analysis to engineering pipelines, experimentation and visualization.</p>
+      <p>I am particularly interested in bridging the gap between AI research and real-world engineering, building systems that are not only effective, but also understandable, reliable and responsibly designed.</p>
+      <p>You can contact me at: <a href="mailto:ya.akaichi@gmail.com">ya.akaichi@gmail.com</a>.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="entry">
+        <strong>Ph.D. in Artificial Intelligence</strong>
+        <em>Université de Namur (Belgium) &amp; Université Clermont Auvergne (France)</em>
+      </div>
+      <!-- Add more entries by copying the block above, e.g.:
+      <div class="entry">
+        <strong>M.Sc. in ..., 2019-2021</strong>
+        <em>University name</em>
+      </div>
+      -->
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>My work explores how machine learning models can be trained collaboratively across distributed data sources without centralising sensitive data, while remaining <strong>interpretable</strong> through symbolic, logic-based representations.</p>
+      <div class="tags">
+        <span>Federated Learning</span>
+        <span>Symbolic AI</span>
+        <span>Explainable AI</span>
+        <span>Data Privacy</span>
+        <span>Trustworthy &amp; Responsible AI</span>
+      </div>
+      <div class="entry" style="margin-top:24px">
+        <strong><a href="https://github.com/YasminAkaichi/FILP-platform" target="_blank" rel="noopener">FILP Platform</a></strong>
+        <em>Open-source platform developed as part of my PhD research.</em>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="tags">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Docker</span>
+        <span>Cloud</span>
+        <span>Data Engineering</span>
+        <span>Data Analysis &amp; Visualization</span>
+        <span>Machine Learning</span>
+        <span>Scientific Communication</span>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li>09/2026: My personal website is now online!</li>
+        <!-- Add news at the top, e.g.:
+        <li>DD/MM/YY: Our paper <a href="LINK">Paper title</a>, with Co-author, has been accepted at CONFERENCE!</li>
+        -->
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ya.akaichi@gmail.com">ya.akaichi@gmail.com</a><br>
+         LinkedIn: <a href="https://www.linkedin.com/in/yasmine-akaichi-761975197/" target="_blank" rel="noopener">Yasmine Akaichi</a><br>
+         GitHub: <a href="https://github.com/YasminAkaichi" target="_blank" rel="noopener">YasminAkaichi</a><br>
+         Location: Namur, Belgium</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Yasmine Akaichi</span>
+  <span>Namur, Belgium</span>
+</footer>
+
+<script>
+  // Highlight the active menu item while scrolling
+  const links = document.querySelectorAll('.nav ul a');
+  const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
+  window.addEventListener('scroll', () => {
+    let current = 0;
+    sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top < 140) current = i; });
+    links.forEach((a, i) => a.classList.toggle('active', i === current));
+  });
+</script>
+</body>
+</html>
