@@ -94,6 +94,14 @@
     ul.news { padding-left: 22px; list-style: circle; }
     ul.news li { margin-bottom: 14px; padding-left: 4px; }
 
+    ul.pubs { list-style: none; }
+    ul.pubs li { margin-bottom: 20px; }
+    .pub-title { font-weight: 600; }
+    .pub-authors { display: block; }
+    .pub-venue { display: block; color: var(--muted); font-style: italic; }
+    .pub-links a { font-size: .85rem; border: 1px solid var(--link); border-radius: 4px; padding: 0 6px; margin-right: 6px; }
+    .pub-links a:hover { background: var(--link); color: #fff; text-decoration: none; }
+
     footer {
       max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px;
       border-top: 1px solid #e3e7ea; color: var(--muted);
@@ -117,8 +125,7 @@
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -146,6 +153,9 @@
       <a href="https://github.com/YasminAkaichi" target="_blank" rel="noopener" aria-label="GitHub">
         <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
       </a>
+      <a href="https://scholar.google.com/citations?user=nGYhMBcAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24"><path d="M12 2 1 9l4 2.6V16c0 2.8 3.1 5 7 5s7-2.2 7-5v-4.4L23 9 12 2Zm0 17c-2.8 0-5-1.4-5-3v-3.1l5 3.2 5-3.2V16c0 1.6-2.2 3-5 3Z"/></svg>
+      </a>
     </div>
   </aside>
 
@@ -168,10 +178,6 @@
         <strong>M.Sc. in Information Systems &amp; Decision Support, 2020 – 2022</strong>
         <em>ISIMA, Université Clermont Auvergne, Clermont-Ferrand, France</em>
       </div>
-      <div class="entry">
-        <strong>B.Sc. in Management Information Systems, 2017 – 2020</strong>
-        <em>Tunis Higher Institute of Management, Tunisia</em>
-      </div>
     </section>
 
     <section id="experience">
@@ -179,22 +185,19 @@
       <div class="entry">
         <strong>Researcher, Jan 2023 – Present</strong>
         <em>University of Namur, Belgium</em>
-        <p style="margin-top:6px">Integrating Inductive Logic Programming (ILP) into Federated Learning for distributed, privacy-preserving symbolic AI. Building data pipelines that turn tabular medical data into logical representations, and evaluating distributed learning workflows in Python. Contributor to the TRAIL workshops (Nantes, Lisbon, London) and Teaching Assistant in Data Analysis.</p>
       </div>
       <div class="entry">
         <strong>Apprentice Engineer, Sep 2021 – Sep 2022</strong>
-        <em>Michelin, Clermont-Ferrand, France (work-study during my Master's)</em>
-        <p style="margin-top:6px">Led the end-to-end development of an industrial simulator, from requirements, UML modeling and wireframing to implementation and UX testing. Integrated OPC UA protocols for real-time data acquisition and delivered Power BI dashboards for operational decision support.</p>
+        <em>Michelin, Clermont-Ferrand, France (work-study alongside my Master's)</em>
       </div>
       <div class="entry">
         <strong>Intern, Apr 2021 – Aug 2021</strong>
         <em>Michelin, Clermont-Ferrand, France</em>
-        <p style="margin-top:6px">Developed a proof-of-concept industrial simulator using C#, .NET and industrial data systems.</p>
       </div>
       <div class="entry">
         <strong>End-of-Studies Intern, Feb 2020 – Jun 2020</strong>
-        <em>Five Consulting, Tunis, Tunisia</em>
-        <p style="margin-top:6px">Built an ML-based recommendation system using NLP techniques (TF-IDF, keyword extraction) on Twitter data, with Python and Elasticsearch pipelines for large-scale text processing.</p>
+        <em>Five Consulting, Tunis, Tunisia</em><br>
+        <span>Recommendation system for news</span>
       </div>
     </section>
 
@@ -214,34 +217,47 @@
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="tags">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Docker</span>
-        <span>Cloud</span>
-        <span>Data Engineering</span>
-        <span>Data Analysis &amp; Visualization</span>
-        <span>Machine Learning</span>
-        <span>Scientific Communication</span>
-      </div>
-    </section>
-
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news">
-        <li>09/2026: My personal website is now online!</li>
-        <!-- Add news at the top, e.g.:
-        <li>DD/MM/YY: Our paper <a href="LINK">Paper title</a>, with Co-author, has been accepted at CONFERENCE!</li>
-        -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-title">FedPopper: Federated Learning Logic Programs from Aggregated Failures</span>
+          <span class="pub-authors"><strong>Y. Akaichi</strong>, et al.</span>
+          <span class="pub-venue">Accepted for publication, September 2026</span>
+        </li>
+        <li>
+          <span class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-032-28358-0_7" target="_blank" rel="noopener">Bach4Popper: Towards Federated Inductive Logic Programming Using Coordination</a></span>
+          <span class="pub-authors"><strong>Y. Akaichi</strong>, M. Barkallah, J.-M. Jacquet, I. Linden, et al.</span>
+          <span class="pub-venue">International Conference on Coordination Models and Languages (COORDINATION), Springer, June 2026</span>
+          <span class="pub-links"><a href="https://link.springer.com/chapter/10.1007/978-3-032-28358-0_7" target="_blank" rel="noopener">Paper</a></span>
+        </li>
+        <li>
+          <span class="pub-title"><a href="https://ceur-ws.org/Vol-4059/paper1.pdf" target="_blank" rel="noopener">Federated Inductive Logic Programming for Explainable Artificial Intelligence</a></span>
+          <span class="pub-authors"><strong>Y. Akaichi</strong>, J.-M. Jacquet, I. Linden, W. Vanhoof</span>
+          <span class="pub-venue">EXPLIMED Workshop @ ECAI, CEUR-WS, October 2025</span>
+          <span class="pub-links"><a href="https://ceur-ws.org/Vol-4059/paper1.pdf" target="_blank" rel="noopener">PDF</a></span>
+        </li>
+        <li>
+          <span class="pub-title"><a href="https://bnaic2024.sites.uu.nl/wp-content/uploads/sites/986/2024/11/Inductive-Logic-Programming-for-Complications-Prediction-from-Medical-Data.pdf" target="_blank" rel="noopener">Inductive Logic Programming for Complications Prediction from Medical Data</a></span>
+          <span class="pub-authors"><strong>Y. Akaichi</strong>, J.-M. Jacquet</span>
+          <span class="pub-venue">Benelux Conference on Artificial Intelligence (BNAIC), Utrecht, Netherlands, November 2024 (Poster)</span>
+          <span class="pub-links"><a href="https://bnaic2024.sites.uu.nl/wp-content/uploads/sites/986/2024/11/Inductive-Logic-Programming-for-Complications-Prediction-from-Medical-Data.pdf" target="_blank" rel="noopener">Poster</a></span>
+        </li>
+        <li>
+          <span class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9430199/" target="_blank" rel="noopener">Mirrors! Gathering, Querying, and Analyzing Fashion and Medical Data</a></span>
+          <span class="pub-authors"><strong>Y. Akaichi</strong>, I. Akaichi</span>
+          <span class="pub-venue">International Conference of Women in Data Science, IEEE, 2021</span>
+          <span class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/9430199/" target="_blank" rel="noopener">Paper</a></span>
+        </li>
       </ul>
+      <p style="margin-top:10px">See also my <a href="https://scholar.google.com/citations?user=nGYhMBcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a>.</p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:ya.akaichi@gmail.com">ya.akaichi@gmail.com</a><br>
          LinkedIn: <a href="https://www.linkedin.com/in/yasmine-akaichi-761975197/" target="_blank" rel="noopener">Yasmine Akaichi</a><br>
+         Google Scholar: <a href="https://scholar.google.com/citations?user=nGYhMBcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Yasmine Akaichi</a><br>
          GitHub: <a href="https://github.com/YasminAkaichi" target="_blank" rel="noopener">YasminAkaichi</a><br>
          Location: Namur, Belgium</p>
     </section>
